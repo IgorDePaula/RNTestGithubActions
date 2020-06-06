@@ -28,7 +28,7 @@ jobs:
             with:
               name: app-release.apk
               path: android/app/build/outputs/apk/release/
-        build-ios:
+        - build-ios:
           needs: install-and-test
           runs-on: [self-hosted, macos]
           steps:
