@@ -36,7 +36,7 @@ jobs:
           path: android/app/build/outputs/apk/release/
   build-ios:
     needs: install-and-test
-    runs-on: [self-hosted, macos]
+    runs-on: [self-hosted, MacBook-Air-de-Igor]
     steps:
       - uses: actions/checkout@v2
       - name: Install npm dependencies
