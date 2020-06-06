@@ -4,16 +4,16 @@ on: [push]
 
 jobs:
     branches:
-    - masterjobs:
-      install-and-test:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Install npm dependencies
-            run: |
+      - masterjobs:
+        install-and-test:
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v2
+            - name: Install npm dependencies
+              run: |
                 npm install
-          - name: Run tests
-            run: |
+            - name: Run tests
+              run: |
                 npm test
     build-android:
       needs: install-and-test
