@@ -1,6 +1,8 @@
 name: Build Android and iOS
+
 on: [push]
-  jobs:
+
+jobs:
     branches:
     - masterjobs:
       install-and-test:
