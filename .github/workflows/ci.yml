@@ -3,8 +3,8 @@ name: Build Android and iOS
 on: [push]
 
 jobs:
-    branches:
-      - master:
+  branches:
+    - master:
         install-and-test:
           runs-on: ubuntu-latest
           steps:
