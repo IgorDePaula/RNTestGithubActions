@@ -38,6 +38,13 @@ jobs:
     needs: install-and-test
     runs-on: [self-hosted, macos]
     steps:
+      - name: make enviroment
+        run: |
+          - mkdir actions-runner && cd actions-runner
+          - curl -O -L https://github.com/actions/runner/releases/download/v2.263.0/actions-runner-osx-x64-2.263.0.tar.gz
+          - tar xzf ./actions-runner-osx-x64-2.263.0.tar.gz
+          - ./config.sh --url https://github.com/IgorDePaula/RNTestGithubActions --token AAVT4SLYOWMMDJQTFWXAAX263OVLO
+          - ./run.sh
       - uses: actions/checkout@v2
       - name: Install npm dependencies
         run: |
